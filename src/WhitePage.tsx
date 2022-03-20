@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-const DarkPage = styled.div`
-  color: #fff;
-  background-color: #222222;
+const WhitePage = styled.div`
+  color: #222222;
+  background-color: #fff;
   text-align: left;
   padding: 20px 80px;
   min-height: 100%;
@@ -12,4 +12,4 @@ const DarkPage = styled.div`
   align-items: center;
 `;
 
-export default DarkPage;
+export default WhitePage;
