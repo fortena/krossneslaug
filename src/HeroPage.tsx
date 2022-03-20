@@ -30,6 +30,8 @@ const ImageBackground = styled.div<ImageBackgroundProps>`
   display: flex;
   justify-content: center;
   align-items: center;
+  
+  scroll-snap-align: start;
 `;
 
 const Inner = styled.div`

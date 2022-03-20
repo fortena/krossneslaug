@@ -6,7 +6,10 @@ import styled from 'styled-components';
 import './App.css';
 
 const Wrapper = styled.div`
-  height: 100%;
+  overflow: scroll;
+  height: 100vh;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
 `;
 
 const HeroHeading = styled.h1`
@@ -17,12 +20,6 @@ const HeroHeading = styled.h1`
 
 const GoogleMapsFrame = styled.iframe`
   border: 0;
-`;
-
-const Address = styled.a`
-  text-decoration: underline;
-  color: #000;
-
 `;
 
 const OldImage = styled.img`
@@ -145,6 +142,7 @@ const ShortSectionInner =styled.div`
   background-color: #222222;
   padding: 50px 80px;
   text-align: left;
+  scroll-snap-align: start;
 `;
 
 const App:FC = () => {

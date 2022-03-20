@@ -10,6 +10,8 @@ const DarkPage = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  scroll-snap-align: start;
 `;
 
 export default DarkPage;
