@@ -15,7 +15,7 @@ const HeroHeading = styled.h1`
 `;
 
 const OldImage = styled.img`
-  height: 300px;
+  height: 500px;
 `;
 
 const CompanionText = styled.p`
@@ -79,7 +79,8 @@ const App:FC = () => {
               Í áratugi var laugin opin án sundlaugarvarðar en þrifin og haldið við að mestu leiti í sjálfboðavinnu af meðlimum ungmennafélagsins og sundlaugagestum var sjálfum treyst að greiða sundgjald í bauka sem staðsettir voru í klefunum.
             </CompanionText>
           </Centered>
-          <OldImage src={`${process.env.PUBLIC_URL}/sundlaug_thrifin_1962.jgp`} />
+          <OldImage src={`${process.env.PUBLIC_URL}/sundlaug_thrifin_1962.jpg
+          `} />
         </Row>
         <Row>
           <OldImage src={`${process.env.PUBLIC_URL}/sundkennsla_1958.jpg`} />
@@ -92,7 +93,7 @@ const App:FC = () => {
         </Row>
       </DarkPage>
 
-      <HeroPage image={`${process.env.PUBLIC_URL}/krossneslaug-sigrun.jpeg`} minHeight="400px"/>
+      <HeroPage image={`${process.env.PUBLIC_URL}/krossneslaug-sigrun.jpg`} minHeight="400px"/>
 
       <ShortSection>
         <ShortSectionInner>
