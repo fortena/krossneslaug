@@ -70,11 +70,14 @@ const AtLogo = styled(At)`
   ${logoStyle}
 `;
 
+{/* <a href="geo:124.028582,-29.201930" target="_blank"></a> */}
+// https://goo.gl/maps/1DaQMHHduZjvZ2JQ7
+
 const QuickNav:FC = () => {
   return (
     <Wrapper>
       <InfoItemWrapper>
-        <Link target="_blank" href="maps://maps.google.com/?q=66.0556012,-21.5079989"><LocationLogo />Kort</Link>
+        <Link target="_blank" href="https://maps.google.com/maps?q=66.0556012,-21.5079989"><LocationLogo />Kort</Link>
       </InfoItemWrapper>
       <InfoItemWrapper>
         <Link href="tel:003548885077"><PhoneLogo />+354 8885077</Link>

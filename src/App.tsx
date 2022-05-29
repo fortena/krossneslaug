@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import HeroPage from './HeroPage';
 import styled from 'styled-components';
 import InfoPage from './InfoPage';
@@ -10,7 +10,8 @@ import './App.css';
 const Wrapper = styled.div`
   overflow: scroll;
   height: 100vh;
-  scroll-snap-points-y: repeat(100vh);
+  height: var(--app-height);
+  scroll-snap-points-y: repeat(--app-height);
   scroll-snap-type: y mandatory;
 `;
 
@@ -39,6 +40,17 @@ const ShortSectionInner =styled.div`
 `;
 
 const App:FC = () => {
+  const appHeight = () => {
+    const doc = document.documentElement
+    doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+   }
+  useEffect(() => {
+    window.addEventListener('resize', appHeight);
+
+    return () => {
+      window.removeEventListener('resize', appHeight);
+    };
+  });
   return (
     <Wrapper>
       <HeroPage image={`${process.env.PUBLIC_URL}/krossneslaug-reddit.webp`}>
