@@ -3,6 +3,8 @@ import HeroPage from './HeroPage';
 import styled from 'styled-components';
 import InfoPage from './InfoPage';
 import HistoryPage from './HistoryPage';
+import SocialLinks from './SocialLinks';
+import QuickNav from './QuickNav';
 import './App.css';
 
 const Wrapper = styled.div`
@@ -18,6 +20,9 @@ const HeroHeading = styled.h1`
   font-size: 100px;
   @media (max-width: 900px) {
     font-size: 40px;
+  }
+  @media (max-width: 650px) {
+    font-size: 32px;
   }
 `;
 
@@ -37,7 +42,9 @@ const App:FC = () => {
   return (
     <Wrapper>
       <HeroPage image={`${process.env.PUBLIC_URL}/krossneslaug-reddit.webp`}>
+        <SocialLinks/>
         <HeroHeading>Krossneslaug</HeroHeading>
+        <QuickNav/>
       </HeroPage>
       <InfoPage />
       <HistoryPage />

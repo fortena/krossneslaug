@@ -126,7 +126,7 @@ const InfoPage:FC = () => {
         />
           <SpaceBetweenRow><InfoText>Krossnes</InfoText></SpaceBetweenRow>
           <SpaceBetweenRow><InfoText>524 Árneshreppur</InfoText></SpaceBetweenRow>
-          <SpaceBetweenRow><Link href="tel:003541234567">+354 1234567</Link></SpaceBetweenRow>
+          <SpaceBetweenRow><Link href="tel:003548885077">+354 8885077</Link></SpaceBetweenRow>
           <SpaceBetweenRow><Link href="mailto:info@krossneslaug.is">info@krossneslaug.is</Link></SpaceBetweenRow>
           <Row>
             <LogoLink target="_blank" href="https://www.facebook.com/krossneslaug" title="https://www.facebook.com/krossneslaug"><LogoImage src={`${process.env.PUBLIC_URL}/f_logo_58.png`}/></LogoLink>

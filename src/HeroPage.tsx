@@ -7,6 +7,7 @@ interface ImageBackgroundProps {
 }
 
 const ImageBackground = styled.div<ImageBackgroundProps>`
+  height: 100%;
   position: relative;
   opacity: 0.8;
   background-attachment: fixed;
@@ -39,7 +40,8 @@ const Inner = styled.div`
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   z-index: 1;
 `;
