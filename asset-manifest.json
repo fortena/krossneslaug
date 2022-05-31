@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/krossneslaug/static/css/main.73d3f5f4.css",
-    "main.js": "/krossneslaug/static/js/main.938cda44.js",
+    "main.js": "/krossneslaug/static/js/main.a6c5a2dc.js",
     "static/js/787.09b62910.chunk.js": "/krossneslaug/static/js/787.09b62910.chunk.js",
     "static/media/instagram.svg": "/krossneslaug/static/media/instagram.813fd06b51b26e101fbbdde32e64af13.svg",
     "static/media/at.svg": "/krossneslaug/static/media/at.04d34fa8c28714d3a1f5687daa83ed09.svg",
@@ -10,11 +10,11 @@
     "static/media/location.svg": "/krossneslaug/static/media/location.994928ef06a51d299a5aa0249b17719a.svg",
     "static/media/facebook.svg": "/krossneslaug/static/media/facebook.8adca75361b744d17bbeb17b9c804d9d.svg",
     "main.73d3f5f4.css.map": "/krossneslaug/static/css/main.73d3f5f4.css.map",
-    "main.938cda44.js.map": "/krossneslaug/static/js/main.938cda44.js.map",
+    "main.a6c5a2dc.js.map": "/krossneslaug/static/js/main.a6c5a2dc.js.map",
     "787.09b62910.chunk.js.map": "/krossneslaug/static/js/787.09b62910.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.73d3f5f4.css",
-    "static/js/main.938cda44.js"
+    "static/js/main.a6c5a2dc.js"
   ]
 }
