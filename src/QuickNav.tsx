@@ -9,7 +9,7 @@ import { ReactComponent as At } from './at.svg';
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 `;
 
 const InnerWrapper = styled.div`
@@ -45,6 +45,7 @@ const logoStyle = css`
   fill: #fff;
   margin-right: 20px;
   @media (max-width: 900px) {
+    margin-right: 10px;
     height: 20px;
     width: 20px;
   }
