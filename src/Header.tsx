@@ -1,9 +1,8 @@
-import React, { FC } from 'react';
+import React from 'react';
 import styled, { css } from 'styled-components';
+import ReactFlagsSelect from "react-flags-select";
 import { ReactComponent as Instagram } from './instagram.svg';
 import { ReactComponent as Facebook } from './facebook.svg';
-import { ReactComponent as Location } from './location.svg';
-import { ReactComponent as Phone } from './phone.svg';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -38,14 +37,24 @@ const InstagramLogo = styled(Instagram)`
   width: 54px;
 `;
 
-const SocialLinks:FC = () => {
+const Header = ({ language, setLanguage } : { language: string, setLanguage: Function }) => {
   return (
     <Wrapper>
       <InnerWrapper>
-        <a target="_blank" href="https://www.facebook.com/krossneslaug" title="https://www.facebook.com/krossneslaug" >
+        <ReactFlagsSelect
+          countries={['IS', 'GB', 'FR', 'DE']}
+          showSelectedLabel={false}
+          showOptionLabel={false}
+          selected={language}
+          onSelect={(code) => {
+            localStorage.setItem('language', code);
+            setLanguage(code)
+          }}
+        />
+        <a target="_blank" rel="noreferrer" href="https://www.facebook.com/krossneslaug" title="https://www.facebook.com/krossneslaug" >
           <FacebookLogo />
         </a>
-        <a target="_blank" href="https://www.instagram.com/explore/tags/krossneslaug" title="#krossneslaug">
+        <a target="_blank"  rel="noreferrer" href="https://www.instagram.com/explore/tags/krossneslaug" title="#krossneslaug">
           <InstagramLogo />
         </a>
       </InnerWrapper>
@@ -53,4 +62,4 @@ const SocialLinks:FC = () => {
   );
 };
 
-export default SocialLinks;
+export default Header;

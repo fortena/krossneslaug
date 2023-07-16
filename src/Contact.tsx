@@ -1,5 +1,6 @@
-import React, { FC } from 'react';
+import React from 'react';
 import styled, { css } from 'styled-components';
+import { Language } from './Language';
 import { ReactComponent as Instagram } from './instagram.svg';
 import { ReactComponent as Facebook } from './facebook.svg';
 import { ReactComponent as Location } from './location.svg';
@@ -10,12 +11,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 100px;
-`;
-
-const InnerWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
 `;
 
 const InfoItemWrapper = styled.div`
@@ -51,14 +46,6 @@ const logoStyle = css`
   }
 `;
 
-const FacebookLogo = styled(Facebook)`
-  ${logoStyle}
-`;
-
-const InstagramLogo = styled(Instagram)`
-  ${logoStyle}
-`;
-
 const LocationLogo = styled(Location)`
   ${logoStyle}
 `;
@@ -71,18 +58,25 @@ const AtLogo = styled(At)`
   ${logoStyle}
 `;
 
+const map: Language = {
+  IS: 'Kort',
+  GB: 'Map',
+  FR: 'Carte',
+  DE: 'Karte',
+};
+
 {/* <a href="geo:124.028582,-29.201930" target="_blank"></a> */}
 // https://goo.gl/maps/1DaQMHHduZjvZ2JQ7
 
-const QuickNav:FC = () => {
+const Contact = ({ language } : { language: string }) => {
   return (
     <Wrapper>
       <InfoItemWrapper>
-        <Link target="_blank" href="https://maps.google.com/maps?q=66.0556012,-21.5079989"><LocationLogo />Kort</Link>
+        <Link target="_blank" href="https://maps.google.com/maps?q=66.0556012,-21.5079989"><LocationLogo />{map[language]}</Link>
       </InfoItemWrapper>
-      <InfoItemWrapper>
+      {/* <InfoItemWrapper>
         <Link href="tel:003548885077"><PhoneLogo />+354 8885077</Link>
-      </InfoItemWrapper>
+      </InfoItemWrapper> */}
       <InfoItemWrapper>
         <Link href="mailto:info@krossneslaug.is"><AtLogo />info@krossneslaug.is</Link>
       </InfoItemWrapper>
@@ -90,4 +84,4 @@ const QuickNav:FC = () => {
   );
 };
 
-export default QuickNav;
+export default Contact;
